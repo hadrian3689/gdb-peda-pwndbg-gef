@@ -1,5 +1,10 @@
 #!/bin/sh
 
+apt-get update -y
+apt-get install gdb -y
+VER=$(gdb -batch -q --nx -ex 'pi import platform; print(".".join(platform.python_version_tuple()[:2]))')
+apt-get install python$VER -y
+
 installer_path=$PWD
 
 echo "[+] Checking for required dependencies..."
@@ -38,11 +43,11 @@ if [ -d ~/peda-arm ] || [ -h ~/.peda ]; then
 
     if [ $skip_peda = 'n' ]; then
         rm -rf ~/peda-arm
-	git clone https://github.com/alset0326/peda-arm.git
+        git clone https://github.com/alset0326/peda-arm.git
     else
-	echo "PEDA ARM skipped"
+        echo "PEDA ARM skipped"
     fi
-else	    
+else        
     echo "[+] Downloading PEDA ARM..."
     git clone https://github.com/alset0326/peda-arm.git ~/peda-arm
 fi
