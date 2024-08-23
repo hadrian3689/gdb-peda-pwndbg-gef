@@ -21,6 +21,9 @@ gdb-pwndbg
 gdb-gef
 ```
 
+## Pwndbg
+If `gdb-pwndbg` fails to run then just follow the install instructions and steps from https://github.com/pwndbg/pwndbg
+
 ## Update
 
 ```
