@@ -22,7 +22,7 @@ gdb-gef
 ```
 
 ## Pwndbg
-If `gdb-pwndbg` fails to run then just follow the install instructions and steps from https://github.com/pwndbg/pwndbg
+If `gdb-pwndbg` fails to run then just follow the install instructions and steps from https://github.com/pwndbg/pwndbg to confirm the required Python version for pwndbg. You ma have to install that specific version along with the venv environment using `apt install python<version>-venv -y`
 
 ## Update
 
